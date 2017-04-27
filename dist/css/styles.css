@@ -16,7 +16,7 @@ ul {
 }
 
 img, video, embed, object {
-  min-width: 100%;
+  max-width: 100%;
 }
 
 img {
@@ -424,6 +424,43 @@ body, input, select, textarea, button {
 .services__item-description {
   color: #494949;
   line-height: 1.9;
+}
+
+.portfolio__nav {
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+.portfolio__nav-item {
+  color: #4d4d4d;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .2s ease;
+  display: block;
+  font-size: 1.375em;
+  margin-bottom: 1.25em;
+}
+
+.portfolio__nav-item:hover, .portfolio__nav-item.is-active {
+  color: #a91aef;
+}
+
+.portfolio__item {
+  display: block;
+  margin-bottom: 2em;
+  text-decoration: none;
+  border: 3px solid transparent;
+  transition: border .2s ease;
+}
+
+.portfolio__item:hover {
+  border-color: #a91aef;
+}
+
+.portfolio__item img {
+  max-width: none;
+  width: 100%;
 }
 
 /*# sourceMappingURL=maps/styles.css.map */

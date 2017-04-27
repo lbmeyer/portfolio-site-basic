@@ -20,3 +20,12 @@
 		text-decoration: underline;
 	}
 }
+
+@mixin hover-border {
+	border: 3px solid transparent;
+	transition: border .2s ease;
+	
+	&:hover {
+		border-color: $color-highlight;
+	}
+}
