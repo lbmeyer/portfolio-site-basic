@@ -5,8 +5,8 @@
 $grid-gutter: 16px;
 
 .grid {
-	margin-left: -$grid-gutter;
-	margin-right: -$grid-gutter;
+	margin-right: ($grid-gutter * -1);
+	margin-left: ($grid-gutter * -1);
 }
 
 @include generate_grid(xs, $grid-gutter);
