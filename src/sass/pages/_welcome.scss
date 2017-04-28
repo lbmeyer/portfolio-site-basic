@@ -6,10 +6,28 @@
 	background: $color-base url(../images/welcome_background.jpg) no-repeat center center;
 	background-size: cover;
 	position: relative;
-	height: em(740);
+	height: em(200);
+	
+	
+	@include tablet-port {
+		height: em(350);
+	}
+	
+	@include wide {
+		height: em(600);
+	}
+	
+	@include very-wide {
+		height: em(749);
+	}
+	
+	@include retina {
+		background-image: url(../images/welcome_backgrounds@2x.jpg);
+	}
+	
 	
 	&__title {
-		font-size: rem(118);
+		font-size: rem(48);
 		text-transform: uppercase;
 		font-weight: 300;
 		color: #FFF;
@@ -19,11 +37,27 @@
 		
 		@include vertical-center;
 		
+		@include tablet-port {
+			font-size: rem(72);
+		}
+		
+		@include wide {
+			font-size: rem(118);
+		}
+		
 	}
 	
 	&__title-complement {
-		font-size: rem(36);
+		font-size: rem(14);
 		display: block;
 		font-weight: 600;
+		
+		@include tablet-port {
+			font-size: rem(24);
+		}
+		 
+		@include wide {
+			font-size: rem(36);
+		}
 	}
 }

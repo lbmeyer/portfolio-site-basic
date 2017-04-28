@@ -17,7 +17,11 @@
 	
 	&__icon, &__content {
 		display: inline-block;
-		vertical-align: top;
+		vertical-align: middle;
+		
+		@include tablet-port {
+			vertical-align: top;
+		}
 	}
 	
 	&__icon {

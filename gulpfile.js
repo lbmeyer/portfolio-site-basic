@@ -24,7 +24,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('copy', function() {
-	return gulp.src('src/*html')
+	return gulp.src('src/**/*.+(html|js)') // search for every folder inside source for html and js files, then copy them 
 	    .pipe(gulp.dest('dist'))
 		.pipe(browsersync.stream())
 });
@@ -39,7 +39,6 @@ gulp.task('browsersync', function() {
 
 gulp.task('watch', ['browsersync', 'css'], function() {
 	gulp.watch('src/sass/**/*.scss', ['css']); 
-	gulp.watch('src/*html', ['copy']);
+	gulp.watch('src/**/*.+(html|js)', ['copy']);
 	// if scss files are changed, run 'css'. If html file changes, run 'copy'
-	
 });
